@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_tencentcloud_ims</name>
+	<version>3.0.0</version>
+	<creationDate>October 2020</creationDate>
+	<author>Tencent</author>
+	<authorEmail>tencent@tencent.com</authorEmail>
+	<authorUrl>www.tencent.com</authorUrl>
+	<copyright>Copyright (C) 2020 Tencent Cloud.</copyright>
+	<license>Apache 2</license>
+	<description>PLG_CONTENT_TENCENTCLOUD_IMS_DESCRIPTION</description>
+	<files>
+		<filename plugin="tencentcloud_ims">tencentcloud_ims.php</filename>
+		<filename>TencentcloudImsAction.php</filename>
+		<filename>DebugerLog.php</filename>
+		<folder>vendor</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_tencentcloud_ims.ini</language>
+		<language tag="en-GB">en-GB.plg_content_tencentcloud_ims.sys.ini</language>
+		<language tag="zh-CN">zh-CN.plg_content_tencentcloud_ims.ini</language>
+		<language tag="zh-CN">zh-CN.plg_content_tencentcloud_ims.sys.ini</language>
+	</languages>
+	<scriptfile>script.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="secret_id"
+						type="password"
+						label="PLG_CONTENT_TENCENTCLOUD_IMS_SECRET_ID"
+						description="PLG_CONTENT_TENCENTCLOUD_IMS_SECRET_ID_DESC"
+						default=""
+						required="true"
+						filter="string"
+						size="100"
+						class="input-xxlarge"
+				/>
+				<field
+						name="secret_key"
+						type="password"
+						label="PLG_CONTENT_TENCENTCLOUD_IMS_SECRET_KEY"
+						description="PLG_CONTENT_TENCENTCLOUD_IMS_SECRET_KEY_DESC"
+						default=""
+						required="true"
+						filter="string"
+						size="100"
+						class="input-xxlarge"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Tencentcloud Ims Update">
+			https://github.com/Tencent-Cloud-Plugins/tencentcloud-joomla-plugin-ims
+		</server>
+	</updateservers>
+</extension>
